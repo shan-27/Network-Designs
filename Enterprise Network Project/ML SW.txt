@@ -1,0 +1,22 @@
+enable
+configure terminal
+hostname ML-SW4
+enable password cisco
+banner motd # No Unauthorized Access!!#
+no ip domain lookup
+line console 0
+password cisco
+login
+exit
+service password-encryption
+
+ip domain name cisco.net
+username cisco password cisco
+crypto key generate rsa
+1024
+line vty 0 15
+login local
+transport input ssh
+exit
+
+do write

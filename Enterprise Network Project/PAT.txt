@@ -1,7 +1,0 @@
-int gig 0/0
-ip nat inside
-
-ip nat inside source list 1 interface Serial0/3/1 overload  // outside link
-
-
-access-list 1 permit 192.168.100.0 0.0.0.63
